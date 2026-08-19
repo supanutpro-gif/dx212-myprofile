@@ -22,7 +22,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Colorful Creative</title>
+  <title>Supanut Promta | Creative Profile</title>
 
   <style>
     * {
@@ -42,31 +42,36 @@
       overflow-x: hidden;
     }
 
-    /* ===== NAVBAR ===== */
+    /* ================= NAVBAR ================= */
+
     nav {
       position: fixed;
       top: 20px;
       left: 50%;
       transform: translateX(-50%);
       width: min(92%, 1100px);
-      padding: 14px 22px;
+
+      padding: 14px 24px;
 
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      background: rgba(255,255,255,0.75);
+      background: rgba(255,255,255,0.78);
       backdrop-filter: blur(15px);
-      border: 2px solid rgba(255,255,255,0.8);
+
+      border: 2px solid rgba(255,255,255,0.9);
       border-radius: 50px;
 
       z-index: 100;
+
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
     .logo {
-      font-size: 22px;
+      font-size: 21px;
       font-weight: 900;
+
       background: linear-gradient(
         90deg,
         #ff4d6d,
@@ -74,6 +79,7 @@
         #2ec4b6,
         #4361ee
       );
+
       -webkit-background-clip: text;
       color: transparent;
     }
@@ -95,14 +101,17 @@
       color: #ff4d6d;
     }
 
-    /* ===== HERO ===== */
+    /* ================= HERO ================= */
+
     .hero {
       min-height: 100vh;
+
       padding: 150px 8% 80px;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 60px;
 
       position: relative;
@@ -115,27 +124,31 @@
     }
 
     .hero-content {
-      max-width: 600px;
+      max-width: 650px;
       z-index: 2;
     }
 
     .tag {
       display: inline-block;
+
       padding: 8px 16px;
       margin-bottom: 20px;
 
       border-radius: 30px;
+
       background: #222;
       color: white;
+
       font-size: 14px;
       font-weight: bold;
     }
 
     h1 {
-      font-size: clamp(55px, 8vw, 100px);
+      font-size: clamp(48px, 7vw, 90px);
       line-height: 0.95;
+
       font-weight: 900;
-      letter-spacing: -5px;
+      letter-spacing: -4px;
     }
 
     h1 span:nth-child(1) {
@@ -146,20 +159,46 @@
       color: #ff9f1c;
     }
 
-    h1 span:nth-child(3) {
-      color: #4361ee;
-    }
-
-    .hero p {
+    .hero-description {
       margin-top: 25px;
+
       font-size: 18px;
       line-height: 1.7;
-      max-width: 500px;
+
       color: #555;
+      max-width: 550px;
     }
+
+    /* ================= PERSONAL INFO ================= */
+
+    .personal-info {
+      margin-top: 30px;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .info {
+      padding: 10px 16px;
+
+      background: rgba(255,255,255,0.8);
+
+      border-radius: 30px;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      border: 1px solid rgba(0,0,0,0.05);
+
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    /* ================= BUTTON ================= */
 
     .buttons {
       margin-top: 30px;
+
       display: flex;
       gap: 15px;
       flex-wrap: wrap;
@@ -167,9 +206,12 @@
 
     .btn {
       padding: 15px 25px;
+
       border-radius: 40px;
+
       text-decoration: none;
       font-weight: bold;
+
       transition: 0.3s;
     }
 
@@ -180,7 +222,9 @@
 
     .btn-main:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+
+      box-shadow:
+        0 12px 25px rgba(0,0,0,0.2);
     }
 
     .btn-light {
@@ -193,10 +237,12 @@
       color: white;
     }
 
-    /* ===== COLORFUL SHAPE ===== */
+    /* ================= VISUAL ================= */
+
     .visual {
       width: 430px;
       height: 430px;
+
       position: relative;
       flex-shrink: 0;
     }
@@ -206,30 +252,91 @@
       height: 330px;
 
       position: absolute;
+
       top: 40px;
       left: 40px;
 
-      background: linear-gradient(
-        135deg,
-        #ff4d6d,
-        #ff9f1c,
-        #2ec4b6,
-        #4361ee
-      );
+      background:
+        linear-gradient(
+          135deg,
+          #ff4d6d,
+          #ff9f1c,
+          #2ec4b6,
+          #4361ee
+        );
 
-      border-radius: 40% 60% 70% 30% / 40% 30% 70% 60%;
+      border-radius:
+        40% 60% 70% 30% /
+        40% 30% 70% 60%;
 
       animation: morph 8s infinite ease-in-out;
-      box-shadow: 20px 25px 60px rgba(67,97,238,0.25);
+
+      box-shadow:
+        20px 25px 60px rgba(67,97,238,0.25);
+    }
+
+    .profile-card {
+      position: absolute;
+
+      width: 250px;
+
+      left: 90px;
+      top: 120px;
+
+      padding: 25px;
+
+      background: rgba(255,255,255,0.88);
+
+      backdrop-filter: blur(15px);
+
+      border-radius: 25px;
+
+      text-align: center;
+
+      box-shadow:
+        0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .profile-icon {
+      width: 75px;
+      height: 75px;
+
+      margin: auto;
+      margin-bottom: 15px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #222;
+      color: white;
+
+      font-size: 30px;
+    }
+
+    .profile-card h3 {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .profile-card p {
+      color: #666;
+      font-size: 13px;
     }
 
     .circle {
       position: absolute;
-      width: 90px;
-      height: 90px;
+
+      width: 80px;
+      height: 80px;
+
       border-radius: 50%;
-      background: #fff;
-      top: 10px;
+
+      background: white;
+
+      top: 5px;
       right: 20px;
 
       animation: float 4s infinite ease-in-out;
@@ -237,52 +344,29 @@
 
     .star {
       position: absolute;
+
       font-size: 80px;
-      bottom: 10px;
+
+      bottom: 5px;
       left: 0;
 
-      animation: rotate 8s linear infinite;
+      animation:
+        rotate 8s linear infinite;
     }
 
-    @keyframes morph {
-      0%, 100% {
-        border-radius: 40% 60% 70% 30% / 40% 30% 70% 60%;
-      }
+    /* ================= PROJECT ================= */
 
-      50% {
-        border-radius: 70% 30% 40% 60% / 60% 70% 30% 40%;
-      }
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-25px);
-      }
-    }
-
-    @keyframes rotate {
-      from {
-        transform: rotate(0);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* ===== SECTION ===== */
     section {
       padding: 100px 8%;
     }
 
     .section-title {
       text-align: center;
+
       font-size: 50px;
+
       font-weight: 900;
+
       margin-bottom: 50px;
     }
 
@@ -290,95 +374,211 @@
       color: #ff4d6d;
     }
 
-    /* ===== CARDS ===== */
-    .cards {
-      max-width: 1100px;
+    .project {
+      max-width: 1050px;
+
       margin: auto;
 
+      padding: 50px;
+
+      border-radius: 40px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ffd6e0,
+          #fff0b5,
+          #c9f7ee
+        );
+
+      box-shadow:
+        0 20px 50px rgba(0,0,0,0.08);
+
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 40px;
+
+      align-items: center;
     }
 
-    .card {
-      padding: 35px;
-      border-radius: 30px;
-      min-height: 250px;
+    .project h3 {
+      font-size: 35px;
 
-      transition: 0.4s;
-    }
-
-    .card:hover {
-      transform: translateY(-12px) rotate(-1deg);
-    }
-
-    .card:nth-child(1) {
-      background: #ffd6e0;
-    }
-
-    .card:nth-child(2) {
-      background: #fff0b5;
-    }
-
-    .card:nth-child(3) {
-      background: #c9f7ee;
-    }
-
-    .icon {
-      font-size: 45px;
       margin-bottom: 20px;
     }
 
-    .card h3 {
-      font-size: 25px;
-      margin-bottom: 12px;
-    }
-
-    .card p {
+    .project p {
       color: #555;
-      line-height: 1.6;
+
+      line-height: 1.8;
     }
 
-    /* ===== ABOUT ===== */
+    .project ul {
+      margin-top: 20px;
+
+      padding-left: 20px;
+
+      line-height: 2;
+    }
+
+    .app-preview {
+      min-height: 300px;
+
+      border-radius: 30px;
+
+      background: #222;
+
+      padding: 25px;
+
+      color: white;
+
+      box-shadow:
+        15px 20px 40px rgba(0,0,0,0.2);
+    }
+
+    .app-top {
+      display: flex;
+
+      justify-content: space-between;
+
+      margin-bottom: 20px;
+    }
+
+    .app-top span {
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    .task {
+      background: #333;
+
+      padding: 15px;
+
+      border-radius: 15px;
+
+      margin-bottom: 10px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+    }
+
+    .task small {
+      color: #aaa;
+    }
+
+    .check {
+      width: 20px;
+      height: 20px;
+
+      border-radius: 50%;
+
+      background: #2ec4b6;
+    }
+
+    /* ================= ABOUT ================= */
+
     .about {
       background: #222;
+
       color: white;
+
       text-align: center;
+
       border-radius: 50px 50px 0 0;
     }
 
     .about p {
-      max-width: 700px;
+      max-width: 750px;
+
       margin: auto;
+
       line-height: 1.8;
+
       color: #ddd;
     }
 
-    /* ===== FOOTER ===== */
+    /* ================= FOOTER ================= */
+
     footer {
       background: #222;
+
       color: #aaa;
+
       text-align: center;
+
       padding: 30px;
+
       border-top: 1px solid #444;
     }
 
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 800px) {
+    /* ================= ANIMATION ================= */
+
+    @keyframes morph {
+
+      0%, 100% {
+        border-radius:
+          40% 60% 70% 30% /
+          40% 30% 70% 60%;
+      }
+
+      50% {
+        border-radius:
+          70% 30% 40% 60% /
+          60% 70% 30% 40%;
+      }
+
+    }
+
+    @keyframes float {
+
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-25px);
+      }
+
+    }
+
+    @keyframes rotate {
+
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 850px) {
 
       nav ul {
         display: none;
       }
 
       .hero {
-        text-align: center;
         flex-direction: column;
-        padding-top: 130px;
+        text-align: center;
       }
 
-      .hero p {
+      .hero-description {
         margin-left: auto;
         margin-right: auto;
+      }
+
+      .personal-info {
+        justify-content: center;
       }
 
       .buttons {
@@ -387,131 +587,289 @@
 
       .visual {
         transform: scale(0.8);
-        margin-top: -30px;
+        margin-top: -40px;
       }
 
-      .cards {
+      .project {
         grid-template-columns: 1fr;
+        padding: 30px;
       }
 
       .section-title {
         font-size: 40px;
       }
+
     }
+
   </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
+
+  <!-- ================= NAVBAR ================= -->
+
   <nav>
-    <div class="logo">COLORFUL.</div>
+
+    <div class="logo">
+      SUPANUT.
+    </div>
 
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#about">About</a></li>
+
+      <li>
+        <a href="#home">Home</a>
+      </li>
+
+      <li>
+        <a href="#project">My Project</a>
+      </li>
+
+      <li>
+        <a href="#about">About</a>
+      </li>
+
     </ul>
+
   </nav>
 
 
-  <!-- HERO -->
+  <!-- ================= HERO ================= -->
+
   <section class="hero" id="home">
 
     <div class="hero-content">
 
       <div class="tag">
-        ✦ CREATIVE & COLORFUL
+        ✦ STUDENT PROFILE
       </div>
 
       <h1>
-        <span>MAKE</span><br>
-        <span>IT</span><br>
-        <span>FUN.</span>
+        <span>HELLO</span><br>
+        <span>I'M</span><br>
+        <span>SUPANUT.</span>
       </h1>
 
-      <p>
-        A colorful creative space for ideas,
-        design and digital experiences.
-        Simple, playful and full of personality.
+      <p class="hero-description">
+
+        สวัสดีครับ ผม <b>ศุภณัฐ พรมทา</b>
+        นักศึกษาจากวิทยาลัยนวัตกรรม
+        มหาวิทยาลัยธรรมศาสตร์
+        ผู้สนใจด้านเทคโนโลยี การออกแบบ
+        และการสร้างสรรค์ไอเดียใหม่ ๆ
+
       </p>
 
+
+      <!-- PERSONAL INFORMATION -->
+
+      <div class="personal-info">
+
+        <div class="info">
+          👤 ศุภณัฐ พรมทา
+        </div>
+
+        <div class="info">
+          🎓 วิทยาลัยนวัตกรรม
+        </div>
+
+        <div class="info">
+          🏫 มหาวิทยาลัยธรรมศาสตร์
+        </div>
+
+        <div class="info">
+          🆔 682765588
+        </div>
+
+      </div>
+
+
       <div class="buttons">
-        <a href="#work" class="btn btn-main">
-          Explore Work →
+
+        <a
+          href="#project"
+          class="btn btn-main"
+        >
+          ดูไอเดียแอปของฉัน →
         </a>
 
-        <a href="#about" class="btn btn-light">
+        <a
+          href="#about"
+          class="btn btn-light"
+        >
           About Me
         </a>
+
       </div>
 
     </div>
 
+
+    <!-- COLORFUL VISUAL -->
 
     <div class="visual">
 
       <div class="blob"></div>
 
+      <div class="profile-card">
+
+        <div class="profile-icon">
+          S
+        </div>
+
+        <h3>
+          Supanut Promta
+        </h3>
+
+        <p>
+          Thammasat University
+        </p>
+
+      </div>
+
       <div class="circle"></div>
 
-      <div class="star">✦</div>
+      <div class="star">
+        ✦
+      </div>
 
     </div>
 
   </section>
 
 
-  <!-- WORK -->
-  <section id="work">
+  <!-- ================= PROJECT ================= -->
+
+  <section id="project">
 
     <h2 class="section-title">
-      My <span>Creative</span> Space
+      My <span>App Idea</span>
     </h2>
 
-    <div class="cards">
 
-      <div class="card">
+    <div class="project">
 
-        <div class="icon">🎨</div>
 
-        <h3>Graphic Design</h3>
+      <!-- PROJECT INFO -->
+
+      <div>
+
+        <h3>
+          📚 แอปจัดการงาน<br>
+          และการเรียน
+        </h3>
 
         <p>
-          Creating visual identities,
-          posters and creative graphics
-          with colorful concepts.
+
+          แอปพลิเคชันที่ช่วยให้นักเรียนและนักศึกษา
+          สามารถจัดการงาน การบ้าน ตารางเรียน
+          และกำหนดส่งงานได้ง่ายขึ้น
+          โดยรวมทุกอย่างไว้ในที่เดียว
+
         </p>
+
+
+        <ul>
+
+          <li>
+            📌 จัดการงานและการบ้าน
+          </li>
+
+          <li>
+            📅 วางแผนตารางเรียน
+          </li>
+
+          <li>
+            ⏰ แจ้งเตือนกำหนดส่งงาน
+          </li>
+
+          <li>
+            📊 ติดตามความคืบหน้าของงาน
+          </li>
+
+        </ul>
 
       </div>
 
 
-      <div class="card">
+      <!-- APP MOCKUP -->
 
-        <div class="icon">💡</div>
+      <div class="app-preview">
 
-        <h3>Creative Ideas</h3>
+        <div class="app-top">
 
-        <p>
-          Turning simple ideas into
-          interesting and memorable
-          visual experiences.
-        </p>
+          <strong>
+            My Study
+          </strong>
 
-      </div>
+          <span>
+            TODAY
+          </span>
+
+        </div>
 
 
-      <div class="card">
+        <div class="task">
 
-        <div class="icon">🚀</div>
+          <div>
 
-        <h3>Digital</h3>
+            <b>
+              UX/UI Assignment
+            </b>
 
-        <p>
-          Exploring websites,
-          interactive experiences
-          and digital design.
-        </p>
+            <br>
+
+            <small>
+              Due Tomorrow
+            </small>
+
+          </div>
+
+          <div class="check"></div>
+
+        </div>
+
+
+        <div class="task">
+
+          <div>
+
+            <b>
+              Cloud Computing
+            </b>
+
+            <br>
+
+            <small>
+              Due Friday
+            </small>
+
+          </div>
+
+          <div class="check"></div>
+
+        </div>
+
+
+        <div class="task">
+
+          <div>
+
+            <b>
+              Project Presentation
+            </b>
+
+            <br>
+
+            <small>
+              Next Week
+            </small>
+
+          </div>
+
+          <div class="check"></div>
+
+        </div>
 
       </div>
 
@@ -520,27 +878,49 @@
   </section>
 
 
-  <!-- ABOUT -->
+  <!-- ================= ABOUT ================= -->
+
   <section class="about" id="about">
 
     <h2 class="section-title">
-      Let's Create <span>Something</span>
+      About <span>Me</span>
     </h2>
 
     <p>
-      Design doesn't always have to be serious.
-      Sometimes the best ideas come from
-      experimenting, playing with colors
-      and trying something completely new.
+
+      ผมชื่อ <b>ศุภณัฐ พรมทา</b>
+      นักศึกษาวิทยาลัยนวัตกรรม
+      มหาวิทยาลัยธรรมศาสตร์
+
+      <br><br>
+
+      ในรายวิชานี้ ผมสนใจการนำเทคโนโลยี
+      มาช่วยแก้ปัญหาในชีวิตประจำวัน
+      โดยเฉพาะปัญหาเรื่องการจัดการงาน
+      และการเรียน
+
+      <br><br>
+
+      จึงมีไอเดียในการสร้าง
+      <b>แอปสำหรับช่วยจัดการงานและการเรียน</b>
+      เพื่อช่วยให้ผู้ใช้งานสามารถวางแผน
+      และติดตามงานของตัวเองได้ง่ายขึ้น
+
     </p>
 
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- ================= FOOTER ================= -->
+
   <footer>
-    © 2026 COLORFUL CREATIVE — Made with ✦
+
+    © 2026 Supanut Promta
+    · Thammasat University
+    · 682765588
+
   </footer>
+
 
 </body>
 </html>
